@@ -1,4 +1,10 @@
 ---
+# This is necessary in order to unarchive the Terraform zip
+- name: Install unzip
+  ansible.builtin.package:
+    name:
+      - unzip
+
 - name: Download and install terraform binary
   ansible.builtin.unarchive:
     creates: "{{ install_dir }}/terraform"
