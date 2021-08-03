@@ -14,7 +14,18 @@ None.
 
 ## Role Variables ##
 
-None.
+- `install_dir` - the directory where the Terraform and terraform-docs
+  binaries are to be installed. Defaults to "/usr/local/bin".
+- `group` - the group of the Terraform and terraform-docs binaries.
+  Defaults to "root".
+- `mode` - the mode of the Terraform and terraform-docs binaries.
+  Defaults to "0766".
+- `owner` - the owner of the Terraform and terraform-docs binaries.
+  Defaults to "root".
+- `terraform_version` - the version of Terraform to install. Defaults
+  to "1.0.3".
+- `terraform_docs_version` - the version of terraform-docs to
+  install. Defaults to "0.14.1".
 
 ## Dependencies ##
 
