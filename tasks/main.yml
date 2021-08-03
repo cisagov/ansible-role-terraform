@@ -6,6 +6,7 @@
     group: "{{ group }}"
     mode: "{{ mode }}"
     owner: "{{ owner }}"
+    remote_src: yes
     src: https://releases.hashicorp.com/terraform/{{ terraform_version }}/terraform_{{ terraform_version }}_linux_amd64.zip
 
 - name: Download and install terraform-docs binary
@@ -13,9 +14,12 @@
     creates: "{{ install_dir }}/terraform-docs"
     dest: "{{ install_dir }}"
     group: "{{ group }}"
+    # The archive also includes a README and a LICENSE file, but we
+    # don't want those.
     include: terraform-docs
     mode: "{{ mode }}"
     owner: "{{ owner }}"
+    remote_src: yes
     # ansible-lint generates a warning that "lines should be no longer
     # than 160 characters" here", but there is no good way to break up
     # this URL
