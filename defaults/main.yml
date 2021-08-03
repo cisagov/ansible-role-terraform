@@ -1,0 +1,14 @@
+---
+# The directory where the Terraform and terraform-docs binaries are to
+# be installed
+install_dir: /usr/local/bin
+# The group of the Terraform and terraform-docs binaries
+group: root
+# The mode of the Terraform and terraform-docs binaries
+mode: 0766
+# The owner of the Terraform and terraform-docs binaries
+owner: root
+# The version of Terraform to install
+terraform_version: 1.0.3
+# The version of terraform-docs to install
+terraform_docs_version: 0.14.1

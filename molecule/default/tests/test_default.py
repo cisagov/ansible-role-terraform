@@ -12,7 +12,14 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
 ).get_hosts("all")
 
 
-@pytest.mark.parametrize("x", [True])
-def test_packages(host, x):
-    """Run a dummy test, just to show what one would look like."""
-    assert x
+@pytest.mark.parametrize(
+    "filename", ["/usr/local/bin/terraform", "/usr/local/bin/terraform-docs"]
+)
+def test_expected_files_are_present(host, filename):
+    """Verify that the expected files were installed."""
+    f = host.file(filename)
+    assert f.exists
+    assert f.is_file
+    assert f.user == "root"
+    assert f.group == "root"
+    assert f.mode == 0o766
