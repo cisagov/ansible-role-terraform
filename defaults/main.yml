@@ -9,6 +9,6 @@ mode: 0766
 # The owner of the Terraform and terraform-docs binaries
 owner: root
 # The version of Terraform to install
-terraform_version: 1.0.3
+terraform_version: 1.0.4
 # The version of terraform-docs to install
 terraform_docs_version: 0.14.1
