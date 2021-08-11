@@ -23,7 +23,7 @@ None.
 - `owner` - the owner of the Terraform and terraform-docs binaries.
   Defaults to "root".
 - `terraform_version` - the version of Terraform to install. Defaults
-  to "1.0.3".
+  to "1.0.4".
 - `terraform_docs_version` - the version of terraform-docs to
   install. Defaults to "0.14.1".
 
