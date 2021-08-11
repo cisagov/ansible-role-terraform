@@ -1,13 +1,13 @@
 ---
 # This is necessary in order to unarchive the Terraform zip and the
 # terraform-docs tarball.
-- name: Install unzip
+- name: Install tar and unzip
   ansible.builtin.package:
     name:
       - tar
       - unzip
 
-- name: Download and install terraform binary
+- name: Download and install Terraform binary
   ansible.builtin.unarchive:
     creates: "{{ install_dir }}/terraform"
     dest: "{{ install_dir }}"
