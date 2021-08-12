@@ -22,4 +22,4 @@ def test_expected_files_are_present(host, filename):
     assert f.is_file
     assert f.user == "root"
     assert f.group == "root"
-    assert f.mode == 0o766
+    assert f.mode == 0o755

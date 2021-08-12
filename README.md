@@ -19,7 +19,7 @@ None.
 - `group` - the group of the Terraform and terraform-docs binaries.
   Defaults to "root".
 - `mode` - the mode of the Terraform and terraform-docs binaries.
-  Defaults to "0766".
+  Defaults to "0755".
 - `owner` - the owner of the Terraform and terraform-docs binaries.
   Defaults to "root".
 - `terraform_version` - the version of Terraform to install. Defaults
