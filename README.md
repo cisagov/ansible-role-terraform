@@ -23,6 +23,13 @@ None.
 | terraform\_version | The version of Terraform to install. | `1.0.4` | No |
 | terraform\_docs\_version | The version of terraform-docs to install. | `0.14.1` | No |
 
+<!--
+| Variable | Description | Default | Required |
+|----------|-------------|---------|----------|
+| optional_variable | Describe its purpose. | `default_value` | No |
+| required_variable | Describe its purpose. | n/a | Yes |
+-->
+
 ## Dependencies ##
 
 None.
