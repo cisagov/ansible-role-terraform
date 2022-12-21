@@ -1,8 +1,7 @@
 # ansible-role-terraform #
 
 [![GitHub Build Status](https://github.com/cisagov/ansible-role-terraform/workflows/build/badge.svg)](https://github.com/cisagov/ansible-role-terraform/actions)
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/cisagov/ansible-role-terraform.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/cisagov/ansible-role-terraform/alerts/)
-[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/cisagov/ansible-role-terraform.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/cisagov/ansible-role-terraform/context:python)
+[![CodeQL](https://github.com/cisagov/ansible-role-terraform/workflows/CodeQL/badge.svg)](https://github.com/cisagov/ansible-role-terraform/actions/workflows/codeql-analysis.yml)
 
 This is an Ansible role for installing
 [Terraform](https://www.terraform.io/) and
@@ -35,8 +34,10 @@ Here's how to use it in a playbook:
 - hosts: all
   become: yes
   become_method: sudo
-  roles:
-    - terraform
+  tasks:
+    - name: Install Terraform
+      ansible.builtin.include_role:
+        name: terraform
 ```
 
 ## Contributing ##
