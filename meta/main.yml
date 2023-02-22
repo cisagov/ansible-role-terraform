@@ -1,8 +1,9 @@
 ---
+dependencies: []
 galaxy_info:
   author: Shane Frasier
-  description: Install Terraform and terraform-docs
   company: CISA Cyber Assessments
+  description: Install Terraform and terraform-docs
   galaxy_tags:
     - terraform
     - terraformdocs
@@ -29,7 +30,6 @@ galaxy_info:
         - bookworm
     - name: Fedora
       versions:
-        - "35"
         - "36"
         - "37"
     - name: Ubuntu
@@ -38,5 +38,3 @@ galaxy_info:
         - focal
         - jammy
   role_name: terraform
-
-dependencies: []
