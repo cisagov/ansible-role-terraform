@@ -1,14 +1,14 @@
 ---
+# The version of terraform-docs to install
+terraform_docs_version: 0.14.1
+# The group of the Terraform and terraform-docs binaries
+terraform_group: root
 # The directory where the Terraform and terraform-docs binaries are to
 # be installed
 terraform_install_dir: /usr/local/bin
-# The group of the Terraform and terraform-docs binaries
-terraform_group: root
 # The mode of the Terraform and terraform-docs binaries
 terraform_mode: 0755
 # The owner of the Terraform and terraform-docs binaries
 terraform_owner: root
 # The version of Terraform to install
 terraform_version: 1.0.4
-# The version of terraform-docs to install
-terraform_docs_version: 0.14.1
