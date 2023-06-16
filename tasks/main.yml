@@ -28,7 +28,4 @@
     mode: "{{ terraform_mode }}"
     owner: "{{ terraform_owner }}"
     remote_src: yes
-    # ansible-lint generates a warning that "lines should be no longer
-    # than 160 characters" here", but there is no good way to break up
-    # this URL
-    src: https://github.com/terraform-docs/terraform-docs/releases/download/v{{ terraform_docs_version }}/terraform-docs-v{{ terraform_docs_version }}-linux-amd64.tar.gz  # noqa 204
+    src: https://github.com/terraform-docs/terraform-docs/releases/download/v{{ terraform_docs_version }}/terraform-docs-v{{ terraform_docs_version }}-linux-amd64.tar.gz
