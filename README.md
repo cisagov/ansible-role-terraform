@@ -15,10 +15,10 @@ None.
 
 | Variable | Description | Default | Required |
 |----------|-------------|---------|----------|
-| group | The group associated with the Terraform and terraform-docs binaries. | `root` | No |
-| mode | The mode of the Terraform and terraform-docs binaries. | `0755` | No |
-| owner | The owner of the Terraform and terraform-docs binaries. | `root` | No |
-| install\_dir | The directory where the Terraform and terraform-docs binaries are to be installed. | `/usr/local/bin` | No |
+| terraform\_group | The group associated with the Terraform and terraform-docs binaries. | `root` | No |
+| terraform\_mode | The mode of the Terraform and terraform-docs binaries. | `0755` | No |
+| terraform\_owner | The owner of the Terraform and terraform-docs binaries. | `root` | No |
+| terraform\_install\_dir | The directory where the Terraform and terraform-docs binaries are to be installed. | `/usr/local/bin` | No |
 | terraform\_version | The version of Terraform to install. | `1.0.4` | No |
 | terraform\_docs\_version | The version of terraform-docs to install. | `0.14.1` | No |
 
