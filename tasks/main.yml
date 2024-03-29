@@ -14,7 +14,7 @@
     group: "{{ terraform_group }}"
     mode: "{{ terraform_mode }}"
     owner: "{{ terraform_owner }}"
-    remote_src: yes
+    remote_src: true
     src: https://releases.hashicorp.com/terraform/{{ terraform_version }}/terraform_{{ terraform_version }}_linux_amd64.zip
 
 - name: Download and install terraform-docs binary
@@ -27,5 +27,5 @@
     include: terraform-docs
     mode: "{{ terraform_mode }}"
     owner: "{{ terraform_owner }}"
-    remote_src: yes
+    remote_src: true
     src: https://github.com/terraform-docs/terraform-docs/releases/download/v{{ terraform_docs_version }}/terraform-docs-v{{ terraform_docs_version }}-linux-amd64.tar.gz
