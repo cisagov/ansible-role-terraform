@@ -23,3 +23,13 @@ def test_expected_files_are_present(host, filename):
     assert f.user == "root"
     assert f.group == "root"
     assert f.mode == 0o755
+
+
+@pytest.mark.parametrize(
+    "command",
+    ["/usr/local/bin/terraform --version", "/usr/local/bin/terraform-docs --version"],
+)
+def test_tools_can_run(host, command):
+    """Verify that the installed tools can run."""
+    cmd = host.run(command)
+    assert cmd.rc == 0, f"Command {command} returned a non-zero exit code."
