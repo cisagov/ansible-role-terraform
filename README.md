@@ -20,7 +20,7 @@ None.
 | terraform\_install\_dir | The directory where the Terraform and terraform-docs binaries are to be installed. | `/usr/local/bin` | No |
 | terraform\_mode | The mode of the Terraform and terraform-docs binaries. | `0755` | No |
 | terraform\_owner | The owner of the Terraform and terraform-docs binaries. | `root` | No |
-| terraform\_version | The version of Terraform to install. | `1.8.5` | No |
+| terraform\_version | The version of Terraform to install. | `1.5.7` | No |
 
 ## Dependencies ##
 
