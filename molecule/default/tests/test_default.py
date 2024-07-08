@@ -30,6 +30,11 @@ def test_expected_files_are_present(host, filename):
     ["/usr/local/bin/terraform --version", "/usr/local/bin/terraform-docs --version"],
 )
 def test_tools_can_run(host, command):
-    """Verify that the installed tools can run."""
+    """Verify that the installed tools can run.
+
+    Note that this test can still pass when running under qemu if the
+    executable architecture does not match the container but does match
+    the host.
+    """
     cmd = host.run(command)
     assert cmd.rc == 0, f"Command {command} returned a non-zero exit code."
