@@ -26,6 +26,22 @@ def test_expected_files_are_present(host, filename):
 
 
 @pytest.mark.parametrize(
+    "executable",
+    ["/usr/local/bin/terraform", "/usr/local/bin/terraform-docs"],
+)
+def test_tools_executable_architecture(host, executable):
+    """Verify that the installed tools have the appropriate architecture."""
+    command = f"file {executable}"
+    cmd = host.run(command)
+    assert cmd.rc == 0, f"Command {command} returned a non-zero exit code."
+    # host.system_info.arch will return either "x86_64" or "aarch64", whereas
+    # file prints out the architecture as "x86-64" or "aarch64".  The call to
+    # string.replace() is therefore necessary to match up these two
+    # conventions.
+    assert host.system_info.arch.replace("_", "-") in cmd.stdout
+
+
+@pytest.mark.parametrize(
     "command",
     ["/usr/local/bin/terraform --version", "/usr/local/bin/terraform-docs --version"],
 )

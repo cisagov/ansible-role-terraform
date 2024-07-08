@@ -4,3 +4,12 @@
 
 - name: Import externally-managed-python playbook
   ansible.builtin.import_playbook: externally-managed-python.yml
+
+# This package is needed for one of our Molecule tests.
+- name: Install file system package
+  hosts: all
+  tasks:
+    - name: Install file
+      ansible.builtin.package:
+        name:
+          - file
