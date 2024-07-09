@@ -1,4 +1,16 @@
 ---
+- name: Load var file based on the OS type
+  ansible.builtin.include_vars: "{{ lookup('first_found', params) }}"
+  vars:
+    params:
+      files:
+        - "{{ ansible_distribution }}_{{ ansible_distribution_release }}.yml"
+        - "{{ ansible_distribution }}.yml"
+        - "{{ ansible_os_family }}.yml"
+        - default.yml
+      paths:
+        - "{{ role_path }}/vars"
+
 # This is necessary in order to unarchive the Terraform zip and the
 # terraform-docs tarball.
 - name: Install tar and unzip
@@ -15,7 +27,7 @@
     mode: "{{ terraform_mode }}"
     owner: "{{ terraform_owner }}"
     remote_src: true
-    src: https://releases.hashicorp.com/terraform/{{ terraform_version }}/terraform_{{ terraform_version }}_linux_amd64.zip
+    src: "{{ terraform_url }}"
 
 - name: Download and install terraform-docs binary
   ansible.builtin.unarchive:
@@ -28,4 +40,4 @@
     mode: "{{ terraform_mode }}"
     owner: "{{ terraform_owner }}"
     remote_src: true
-    src: https://github.com/terraform-docs/terraform-docs/releases/download/v{{ terraform_docs_version }}/terraform-docs-v{{ terraform_docs_version }}-linux-amd64.tar.gz
+    src: "{{ terraform_docs_url }}"
