@@ -38,7 +38,7 @@ def test_tools_executable_architecture(host, executable):
     # file prints out the architecture as "x86-64" or "aarch64".  The call to
     # string.replace() is therefore necessary to match up these two
     # conventions.
-    assert host.system_info.arch.replace("_", "-") in cmd.stdout
+    assert host.system_info.arch.replace("x86_64", "x86-64") in cmd.stdout
 
 
 @pytest.mark.parametrize(
