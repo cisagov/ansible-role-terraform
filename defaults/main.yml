@@ -1,6 +1,6 @@
 ---
 # The version of terraform-docs to install
-terraform_docs_version: 0.18.0
+terraform_docs_version: "0.18.0"
 # The group of the Terraform and terraform-docs binaries
 terraform_group: root
 # The directory where the Terraform and terraform-docs binaries are to
@@ -24,4 +24,4 @@ terraform_owner: root
 # - The Cloud Native Computing Foundation (CNCF) recommends
 #   considering alternative components if a project uses a component
 #   under the BUSL-1.1 license.
-terraform_version: 1.5.7
+terraform_version: "1.5.7"
