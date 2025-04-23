@@ -7,7 +7,7 @@ terraform_group: root
 # be installed
 terraform_install_dir: /usr/local/bin
 # The mode of the Terraform and terraform-docs binaries
-terraform_mode: 0755
+terraform_mode: u=rwx,g=rx,o=rx
 # The owner of the Terraform and terraform-docs binaries
 terraform_owner: root
 # The version of Terraform to install
