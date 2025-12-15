@@ -1,6 +1,7 @@
 # ansible-role-terraform #
 
 [![GitHub Build Status](https://github.com/cisagov/ansible-role-terraform/workflows/build/badge.svg)](https://github.com/cisagov/ansible-role-terraform/actions)
+[![License](https://img.shields.io/github/license/cisagov/ansible-role-terraform)](https://spdx.org/licenses/)
 [![CodeQL](https://github.com/cisagov/ansible-role-terraform/workflows/CodeQL/badge.svg)](https://github.com/cisagov/ansible-role-terraform/actions/workflows/codeql-analysis.yml)
 
 This is an Ansible role for installing
